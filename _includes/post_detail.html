@@ -1,0 +1,21 @@
+
+
+        {% if post.featured_image %}
+        <span class="img" style="background-image: url('{{ post.featured_image }}');"></span>
+        {% endif %}
+
+        {% if post.featured_video_id %}
+        <iframe src="https://www.youtube.com/embed/{{ post.featured_video_id }}" class="video" frameborder="0" allowfullscreen></iframe>
+        {% endif %}
+
+
+
+<h1 class="entry-title">
+{% if page.title %}
+    <a href="{{ root_url }}{{ page.url }}">{{ page.title }}</a>
+{% endif %}
+{% if post.title %}
+    <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
+{% endif %}
+</h1>
+

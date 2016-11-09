@@ -1,0 +1,44 @@
+<nav {% if site.reverse == true %}id="nav-left"{% else %}id="nav"{% endif %}>
+	<div id="nav-list">
+		<a href="{{ site.baseurl }}">Home</a>
+
+
+<a href="/curlsbeforegirls/blog/index">Blog</a>
+
+
+		<!-- Nav pages -->
+	  {% for page in site.pages %}
+	    {% if page.layout == "page" %}
+	      <a href="{% if site.baseurl == "/" %}{{ page.url }}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}" title="{{ page.title }}">{{ page.title }}</a>
+	    {% endif %}
+	  {% endfor %}
+    
+    <!-- Nav links -->
+	 
+	</div>
+  
+  <!-- Nav footer -->
+  	<div id="nav-list">
+	  
+	  <div class="navshit">Useful Links</div>
+	<div class="navshit">Reddit subbredits:</div>
+	<a href="https://www.reddit.com/r/bodybuilding" target="_blank">Bodybuilding</a>
+	<a href="https://www.reddit.com/r/fitness" target="_blank">Fitness</a>
+	<a href="https://www.reddit.com/r/nutrition" target="_blank">Nutrition</a>
+	<a href="https://www.reddit.com/r/steroids" target="_blank">Steroids</a>
+	<a href="https://www.reddit.com/r/steroids/wiki/index" target="_blank">Steroids - wiki</a>
+	<a href="https://www.reddit.com/r/steroidsourcetalk" target="_blank">Steroidsourcetalk</a>
+	<a href="https://www.reddit.com/r/supplements" target="_blank">Supplements</a>
+	<div class="navshit">Other links:</div>
+	<a href="http://www.bodybuilding.com/" target="_blank">Bodybuilding.com</a>
+	<a href="https://www.dropbox.com/sh/j41mqhcoejs4jfn/AABtVyhHbIHfmiARtgmLoLh-a" target="_blank">Bodybuilding PDF's</a>
+	<a href="https://bodymaxing.com/" target="_blank">Bodymaxing - Bodybuilding forum</a>
+	<a href="https://labdoor.com/rankings" target="_blank">Labdoor - Supplement rankings</a>
+	<a href="https://drive.google.com/drive/u/0/folders/0B54VseEUPpyJQVdQckgtMkJHbkE?amp%3Busp=sharing&tid=0B0Vyec-yHY6DYmNiMkg1dlZIelU" target="_blank">Lots of useful eBooks</a>
+	<a href="http://www.postcycletherapy.net/" target="_blank">PCT information</a>
+	<a href="https://www.eroids.com" target="_blank">Eroids - Steroid source reviews</a>
+	<a href="https://www.t-nation.com/" target="_blank">T-Nation - Fitness blog</a>
+
+
+	</div>
+</nav>

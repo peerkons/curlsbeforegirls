@@ -1,0 +1,42 @@
+# Site settings
+title: CURLS BEFORE GIRLS
+description: "Your go-to place for Bodybuilding and Fitness related content!"
+url: "https://peerkons.github.io/curlsbeforegirls/"
+author:
+  name: "Pauls Perkons"
+  email: "thunderpuls@gmail.com"
+  url: "https://peerkons.github.io/curlsbeforegirls/"
+
+# Build settings
+baseurl: /curlsbeforegirls
+blog: /curlsbeforegirls/blog/index # Change this to your relative path (ex: /blog/), or leave just a /
+markdown: kramdown
+source: .
+destination: ./_site
+permalink: /:title
+paginate: 8
+
+paginate_path: /blog/page/:num
+
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Plugins
+gems:
+  - jekyll-paginate
+
+# Custom variables
+version: "1.1.0"
+
+# Options
+custom_header: true
+custom_nav_footer: true
+reverse: false
+
+categories: [bodybuilding, lifestyle, nutrition, shitpost, steroids, supplements, training]

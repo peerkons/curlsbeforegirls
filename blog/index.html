@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+
+
+<ul id="posts">
+{% for post in paginator.posts %}
+
+
+
+    {% if post.featured_image or post.featured_video_id %}
+    <a href="{{ post.url | prepend: site.baseurl }}" class="featurette">
+        {% if post.featured_image %}
+        <span class="img" style="background-image: url('{{ post.featured_image }}');"></span>
+        {% endif %}
+
+        {% if post.featured_video_id %}
+        <iframe src="https://www.youtube.com/embed/{{ post.featured_video_id }}" class="video" frameborder="0" allowfullscreen></iframe>
+        {% endif %}
+    
+		{% endif %}
+	</a>
+
+
+
+		<li class="post">
+      		<h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
+      		<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time>
+      		<p class="shorttext">{{ post.content | strip_html | truncatewords:50 }}</p>
+      		 <a href="{{ post.url | prepend: site.baseurl }}" class="read-more btn btn-info btn-lg">Read More <i class="fa fa-angle-right"></i></a>
+    </li>
+    {% endfor %}
+    </ul>
+

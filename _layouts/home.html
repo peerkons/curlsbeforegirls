@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	{% include menu.html %}
+    
+    <!-- Icon menu -->
+	  <a {% if site.reverse == true %}id="nav-menu-left"{% else %}id="nav-menu"{% endif %}>
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+
+        {% include header-custom.html %}
+   
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			{{ content }}
+
+	  </main>
+
+
+		  
+	  </div>
+	  <div class="atstarpe">
+    </div>
+<div class="containerhome">
+    <!-- End Slide Show -->
+      <div class="row marketing">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <img src="img/entertainment.png" class="img-circle">
+            <h2 align="center">Entertainment</h2>
+            <p align="center">Funny and intriguing content</p>
+
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <img src="img/info.png" alt="marketing01" class="img-circle">
+            <h2 align="center">Information</h2>
+            <p align="center">Knowledge and the newest information in the industry</p>
+
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <img src="img/community.png" class="img-circle">
+            <h2 align="center">Community</h2>
+            <p align="center">Chat with like-minded people</p>
+          </div>
+      </div>
+ </div>
+
+ <div class="atstarpe">
+    </div>
+
+<div class="blog-index">  
+  {% assign post = site.posts.first %}
+  {% assign content = post.content %}
+  {% include post_detail.html %}
+  
+</div>
+
+
+</body>
+</html>
